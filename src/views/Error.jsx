@@ -10,9 +10,6 @@ export default function Error() {
     return (
         <Page topInset bottomInset>
             <GenericError 
-                title = "" 
-                bodyText = "" 
-                retryButtonLabel = ""
                 onRetryPress={navigateToHome}
             />
         </Page>
