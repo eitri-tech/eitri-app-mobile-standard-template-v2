@@ -22,7 +22,7 @@ export default function GenericError(props) {
     getConfigs()
 
     function onCancelPress() {
-        Eitri.navigation.back()
+        Eitri.navigation.backToTop()
     }
 
     const date = new Date(Date.now());
