@@ -25,18 +25,12 @@ export default function GenericError(props) {
         Eitri.navigation.back()
     }
 
-    const options = {
-        day: '2-digit',
-        month: '2-digit',
-        year: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        timeZone: 'America/Sao_Paulo',
-        hour12: false,
-    };
-
-    const formatter = new Intl.DateTimeFormat('pt-BR', options);
-    const formattedDateHour = formatter.format(new Date()).replace(',', ' às ');
+    const date = new Date(Date.now());
+    const formattedDateHour = new Intl.DateTimeFormat("pt-BR", {
+        dateStyle: "short",
+        timeStyle: "short",
+        timeZone: "America/Sao_Paulo",
+      }).format(date)
 
     return (
         <View className="flex items-center justify-center min-h-[85vh] bg-opacity-90">
