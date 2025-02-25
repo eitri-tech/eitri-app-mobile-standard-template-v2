@@ -16,15 +16,13 @@ export default function GenericError(props) {
             const configs = await Eitri.getConfigs()
             setAppSlug(configs?.miniAppData?.slug)
         } catch (error) {
-            console.error("@Shared.GenericError.getConfigs", error)
+            console.error("@GenericError.getConfigs", error)
         }
     }
     getConfigs()
 
     function onCancelPress() {
-        Eitri.navigation.navigate({
-            path: 'Home',
-        })
+        Eitri.navigation.back()
     }
 
     const options = {
