@@ -22,9 +22,7 @@ export default function GenericError(props) {
     getConfigs()
 
     function onCancelPress() {
-        Eitri.navigation.navigate({
-            path: 'Home',
-        })
+        Eitri.navigation.back()
     }
 
     const options = {
