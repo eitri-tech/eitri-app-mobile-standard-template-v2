@@ -8,7 +8,7 @@ import { Text, View, Button } from "eitri-luminus";
  * 
  */
 export default function GenericError(props) {
-    const { onRetryPress = null } = props
+    const { onRetryPress =() => {console.log("onRetryPress not implemented")} } = props
     const [appSlug, setAppSlug] = useState('')
 
     async function getConfigs() {
