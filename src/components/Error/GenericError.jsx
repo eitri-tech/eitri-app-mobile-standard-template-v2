@@ -38,7 +38,7 @@ export default function GenericError(props) {
     };
 
     const formatter = new Intl.DateTimeFormat('pt-BR', options);
-    const formattedDateHour = formatter.format(new Date()).replace(',', ' às ').replace(' ', ' ');
+    const formattedDateHour = formatter.format(new Date()).replace(',', ' às ');
 
     return (
         <View className="flex items-center justify-center min-h-[85vh] bg-opacity-90">
