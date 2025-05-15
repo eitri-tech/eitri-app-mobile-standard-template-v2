@@ -5,6 +5,7 @@ export default function Error() {
         Eitri.navigation.navigate({
             path: 'Home',
         })
+        return
     }
 
     return (
