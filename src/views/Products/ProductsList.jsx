@@ -4,7 +4,7 @@ import { View, Text, Image, Page } from "eitri-luminus";
 import { useTranslation } from "eitri-i18n";
 import HeaderComponent from "../../components/HeaderComponent";
 
-export default function Products() {
+export default function ProductsList() {
   const { t, i18n } = useTranslation();
   const [products, setProducts] = useState([]);
 
